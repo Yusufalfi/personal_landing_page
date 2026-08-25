@@ -1,3 +1,5 @@
+import { ExternalLink, Eye } from "lucide-react";
+
 const toneMap = {
   green: "bg-green",
   blue: "bg-blue",
@@ -5,16 +7,17 @@ const toneMap = {
   purple: "bg-purple",
 };
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, onSelect }) {
   return (
-    <article className="overflow-hidden border-4 border-ink bg-white shadow-[8px_8px_0_#111]">
-      <div
-        className={`relative flex min-h-65 items-center justify-center border-b-4 border-ink p-6 ${toneMap[project.tone]}`}
-      >
-        <div className="w-[84%] -rotate-2 border-4 border-ink bg-white p-4 shadow-[7px_7px_0_#111]">
+    <article
+      onClick={() => onSelect && onSelect(project)}
+      className="group relative cursor-pointer overflow-hidden border-4 border-ink bg-white shadow-[8px_8px_0_#111] transition-all hover:-translate-y-1 hover:shadow-[12px_12px_0_#111]"
+    >
+      <div className={`relative flex min-h-65 items-center justify-center border-b-4 border-ink p-6 ${toneMap[project.tone]}`}>
+        <div className="w-[84%] -rotate-2 border-4 border-ink bg-white p-4 shadow-[7px_7px_0_#111] transition-transform duration-300 group-hover:scale-105">
           <div className="mb-3 flex justify-between border-b-3 border-ink pb-2 text-[10px] font-black">
             <span>{project.category}</span>
-            <span>● LIVE</span>
+            <span className="flex items-center gap-1 text-green-700">● LIVE</span>
           </div>
           <div className="space-y-2">
             <div className="flex gap-2">
@@ -30,11 +33,23 @@ export default function ProjectCard({ project }) {
         </div>
 
         <span className="absolute left-4 top-4 text-2xl font-black">✦</span>
+
+        {/* HOVER OVERLAY: TOMBOL VIEW DEMO */}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+          <span className="flex items-center gap-2 border-3 border-ink bg-yellow px-4 py-2 font-mono text-xs font-black uppercase shadow-[4px_4px_0_#111]">
+            <Eye size={16} /> View Demo & Details
+          </span>
+        </div>
       </div>
 
+      {/* ISI KONTEN */}
       <div className="p-6">
-        <div className="text-xs font-black">{project.number} / {project.category}</div>
-        <h3 className="mt-2 text-3xl font-black tracking-[-.05em]">{project.title}</h3>
+        <div className="text-xs font-black">
+          {project.number} / {project.category}
+        </div>
+        <h3 className="mt-2 text-3xl font-black tracking-[-.05em] group-hover:underline">
+          {project.title}
+        </h3>
         <p className="mt-2 font-semibold leading-6">{project.description}</p>
 
         <div className="mt-5 flex flex-wrap gap-2">
@@ -48,9 +63,12 @@ export default function ProjectCard({ project }) {
           ))}
         </div>
 
-        <div className="mt-6 border-t-3 border-ink pt-4">
-          <span className="text-xs font-black uppercase">Impact → </span>
-          <span className="text-sm font-bold">{project.impact}</span>
+        <div className="mt-6 flex items-center justify-between border-t-3 border-ink pt-4">
+          <div>
+            <span className="text-xs font-black uppercase">Impact → </span>
+            <span className="text-sm font-bold">{project.impact}</span>
+          </div>
+          <ExternalLink size={16} className="transition-transform group-hover:translate-x-1" />
         </div>
       </div>
     </article>

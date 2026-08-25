@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MessageSquare } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -16,17 +16,30 @@ export default function Contact() {
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
+          {/* Email Link (Fixed with mailto:) */}
           <a
-            href="mailto:hello@example.com"
-            className="neo-button flex items-center gap-2 border-3 border-ink bg-ink px-5 py-3 text-sm font-black text-white shadow-[4px_4px_0_#111]"
+            href="mailto:yusufalfi91@gmail.com"
+            className="neo-button flex items-center gap-2 border-3 border-ink bg-ink px-5 py-3 text-sm font-black text-white shadow-[4px_4px_0_#111] transition-transform hover:-translate-y-0.5"
           >
             Email me <ArrowUpRight size={16} />
           </a>
+
+          {/* WhatsApp Link */}
           <a
-            href="https://www.linkedin.com/"
+            href="https://wa.me/6289508095112?text=Halo%20Yusuf,%20saya%20tertarik%20diskusi%20tentang%20otomasi%20workflow."
             target="_blank"
             rel="noreferrer"
-            className="neo-button flex items-center gap-2 border-3 border-ink bg-white px-5 py-3 text-sm font-black shadow-[4px_4px_0_#111]"
+            className="neo-button flex items-center gap-2 border-3 border-ink bg-green px-5 py-3 text-sm font-black shadow-[4px_4px_0_#111] transition-transform hover:-translate-y-0.5"
+          >
+            <MessageSquare size={16} /> WhatsApp <ArrowUpRight size={16} />
+          </a>
+
+          {/* LinkedIn Link */}
+          <a
+            href="https://www.linkedin.com/in/yusuf-alfi/"
+            target="_blank"
+            rel="noreferrer"
+            className="neo-button flex items-center gap-2 border-3 border-ink bg-white px-5 py-3 text-sm font-black shadow-[4px_4px_0_#111] transition-transform hover:-translate-y-0.5"
           >
             LinkedIn <ArrowUpRight size={16} />
           </a>

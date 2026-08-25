@@ -1,3 +1,4 @@
+
 export const projects = [
   {
     number: "01",
@@ -8,6 +9,9 @@ export const projects = [
     tech: ["UiPath", "AI", "OCR"],
     impact: "Manual effort reduced",
     tone: "green",
+    beforeText: "2-3 hours/day of manual data entry",
+    afterText: "< 2-minute automated extractions",
+    demoMedia: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     number: "02",
@@ -18,6 +22,9 @@ export const projects = [
     tech: ["Python", "Playwright", "JSON"],
     impact: "Structured data pipeline",
     tone: "blue",
+    beforeText: "Manual copy-pasting of thousands of lines",
+    afterText: "Automatic scraping in seconds",
+    demoMedia: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     number: "03",
@@ -28,6 +35,9 @@ export const projects = [
     tech: ["Playwright", "Selenium", "Python"],
     impact: "Repeatable browser workflows",
     tone: "pink",
+    beforeText: "Manually fill out the form repeatedly.",
+    afterText: "100% precise bot execution",
+    demoMedia: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     number: "04",
@@ -38,5 +48,8 @@ export const projects = [
     tech: ["UiPath", "SQL", "Email"],
     impact: "Automated reporting",
     tone: "purple",
+    beforeText: "Manual weekly report summary",
+    afterText: "Report email sent automatically",
+    demoMedia: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 ];

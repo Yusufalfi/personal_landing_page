@@ -1,8 +1,15 @@
+
+import { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
 import { projects } from "../data/projects";
 
 export default function Projects() {
+
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
+  
     <section id="work" className="bg-paper px-5 py-20 md:px-8">
       <div className="mx-auto max-w-300">
         <div className="mb-11 grid gap-7 lg:grid-cols-[1fr_430px] lg:items-end">
@@ -24,10 +31,21 @@ export default function Projects() {
 
         <div className="grid gap-7 md:grid-cols-2">
           {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              onSelect={(data) => setSelectedProject(data)}
+            />
           ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   );
 }
