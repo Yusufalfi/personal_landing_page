@@ -46,7 +46,7 @@ export default function Contact() {
 
           {/* WhatsApp Link */}
           <a
-            href="https://wa.me/6281234567890?text=Halo%20Yusuf,%20saya%20tertarik%20diskusi%20tentang%20otomasi%20workflow."
+            href="https://wa.me/6289508095112?text=Halo%20Yusuf,%20saya%20tertarik%20diskusi%20tentang%20otomasi%20workflow."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with Yusuf Alfi on WhatsApp"
