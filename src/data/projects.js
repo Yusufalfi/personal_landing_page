@@ -11,7 +11,8 @@ export const projects = [
     tone: "green",
     beforeText: "2-3 hours/day of manual data entry",
     afterText: "< 2-minute automated extractions",
-    demoMedia: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    // demoMedia: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    demoMedia: "https://www.youtube.com/embed/0J8tsSoi6N8?si=PXWpViRSHOpQu8lH",
   },
   {
     number: "02",
