@@ -34,7 +34,7 @@ export default function ProjectCard({ project, onSelect }) {
 
         <span className="absolute left-4 top-4 text-2xl font-black">✦</span>
 
-        {/* HOVER OVERLAY: TOMBOL VIEW DEMO */}
+        
         <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
           <span className="flex items-center gap-2 border-3 border-ink bg-yellow px-4 py-2 font-mono text-xs font-black uppercase shadow-[4px_4px_0_#111]">
             <Eye size={16} /> View Demo & Details
@@ -42,7 +42,7 @@ export default function ProjectCard({ project, onSelect }) {
         </div>
       </div>
 
-      {/* ISI KONTEN */}
+   
       <div className="p-6">
         <div className="text-xs font-black">
           {project.number} / {project.category}
