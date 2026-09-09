@@ -1,3 +1,4 @@
+
 import { ExternalLink, Eye } from "lucide-react";
 
 const toneMap = {
@@ -34,15 +35,13 @@ export default function ProjectCard({ project, onSelect }) {
 
         <span className="absolute left-4 top-4 text-2xl font-black">✦</span>
 
-        
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-          <span className="flex items-center gap-2 border-3 border-ink bg-yellow px-4 py-2 font-mono text-xs font-black uppercase shadow-[4px_4px_0_#111]">
+        <div className="absolute inset-0 flex items-center justify-center bg-black/30 md:bg-black/40 opacity-100 md:opacity-0 transition-opacity duration-200 md:group-hover:opacity-100">
+          <span className="flex items-center gap-2 border-3 border-ink bg-yellow px-4 py-2 font-mono text-xs font-black uppercase shadow-[4px_4px_0_#111] transition-transform active:scale-95">
             <Eye size={16} /> View Demo & Details
           </span>
         </div>
       </div>
 
-   
       <div className="p-6">
         <div className="text-xs font-black">
           {project.number} / {project.category}
@@ -63,13 +62,19 @@ export default function ProjectCard({ project, onSelect }) {
           ))}
         </div>
 
-        <div className="mt-6 flex items-center justify-between border-t-3 border-ink pt-4">
+      <div className="mt-6 border-t-3 border-ink pt-4">
+        <div className="flex items-start justify-between gap-2">
           <div>
-            <span className="text-xs font-black uppercase">Impact → </span>
-            <span className="text-sm font-bold">{project.impact}</span>
+            <span className="text-xs font-black uppercase block text-neutral-500 mb-0.5">
+              Impact →
+            </span>
+            <p className="text-xs md:text-sm font-bold text-neutral-900 leading-snug">
+              {project.impact}
+            </p>
           </div>
-          <ExternalLink size={16} className="transition-transform group-hover:translate-x-1" />
+          <ExternalLink size={18} className="mt-1 shrink-0 transition-transform group-hover:translate-x-1" />
         </div>
+      </div>
       </div>
     </article>
   );
