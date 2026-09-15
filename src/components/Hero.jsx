@@ -31,7 +31,6 @@ export default function Hero() {
   return (
     <section
       id="top"
-      /* Tambah pt-28 di mobile agar tidak tertimpa Navbar fixed */
       className="relative overflow-hidden bg-paper px-4 pb-16 pt-28 md:px-8 md:pb-20 lg:pb-24 lg:pt-32"
     >
       <div className="mx-auto grid max-w-300 items-center gap-10 md:gap-14 lg:grid-cols-[1.15fr_.85fr]">
@@ -70,7 +69,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Card Banner / Animation Box */}
         <div className="relative min-h-[380px] rotate-2 overflow-hidden rounded-3xl border-4 border-ink bg-purple p-4 shadow-[8px_8px_0_#111] sm:min-h-[420px] sm:p-6 md:h-[460px] md:p-8 md:shadow-[10px_10px_0_#111] transition-transform duration-500 hover:-translate-y-2">
           <span className="absolute right-3 top-2 text-2xl font-black md:right-4 md:top-3 md:text-3xl">✦</span>
 
@@ -110,7 +108,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Bottom Badges: Menggunakan flex wrap di mobile agar tidak bertumpuk */}
+          
           <div className="absolute bottom-4 left-3 right-3 flex flex-wrap items-center justify-between gap-2 sm:left-6 sm:right-6 sm:bottom-6 md:bottom-8 md:left-8 md:right-8">
             <div className="-rotate-3 border-3 border-ink bg-green px-2.5 py-1 text-[10px] font-black shadow-[3px_3px_0_#111] sm:px-3 sm:py-1.5 sm:text-xs sm:shadow-[4px_4px_0_#111]">
               <Check className="mr-1 inline" size={12} /> TIME SAVED

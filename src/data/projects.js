@@ -19,24 +19,42 @@ export const projects = [
     demoMedia: "https://www.youtube.com/embed/0J8tsSoi6N8?si=PXWpViRSHOpQu8lH",
   },
   {
-    number: "02",
-    title: "JobStreet Job Scraper",
-    category: "WEB SCRAPING",
-    description:
-      "Collect dynamic job listings and transform web pages into clean, structured JSON data ready for further processing.",
-    goal: "Rapidly collect dynamic job posting data from JobStreet at scale.",
-    problem:
-      "Manually gathering thousands of job postings is extremely time-consuming and highly prone to human error.",
-    solution:
-      "Developed an automated web scraper using Python and Playwright to handle dynamic web content and extract key elements efficiently.",
-    impact:
-      "Scraped job listings are instantly structured into clean JSON/Excel formats, ready for downstream analysis or databases.",
-    tech: ["Python", "Playwright", "JSON"],
-    tone: "blue",
-    beforeText: "Manual copy-pasting of thousands of lines",
-    afterText: "Automatic scraping in seconds",
-    demoMedia: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
+  number: "02",
+  title: "JobStreet Job Scraper",
+  category: "Python · Playwright · Tkinter · Web Scraping",
+  description:
+    "To build a tool that extracts job vacancy data from JobStreet based on user-configured search parameters.",
+  problem:
+    "Manually searching and collecting numerous job postings is time-consuming, especially when users have to open each job detail page and reorganize the data into a structured format.",
+  solution:
+    `I developed a desktop-based scraping tool using Python, Playwright, and Tkinter.
+
+    Users can specify:
+    - Position / Job Keyword
+    - Minimum Salary
+    - Job Posting Date
+    - Maximum Number of Data
+    - Export Format: JSON / Excel
+
+    The scraper then retrieves job information such as: Job Title, Company, Salary, Location, Short Description, Job Link, Posted Date, Work Type, Full Description.
+
+    Performance & Reliability:
+    To increase processing speed, the scraper utilizes parallel tab processing with a maximum limit of 5 concurrent tabs.
+
+    I also implemented:
+    - Real-time Activity Log for progress monitoring
+    - Error Handling for timeouts or failed page loads
+    - Progress Tracking (e.g., "Completed tab X of Y")
+    - Data Export directly to JSON and Excel formats`,
+  impact:
+      "The final outcome is a scraping tool that allows users to conduct searches with highly flexible parameters, monitor the scraping progress in real time, and obtain data in a ready-to-use format for further analysis or next-step processes.",
+      tech: ["Python", "Playwright", "JSON"],
+      tone: "blue",
+      beforeText: "Manual copy-pasting of thousands of lines",
+      afterText: "Automatic scraping in seconds",
+      demoMedia: "https://www.youtube.com/embed/_QG5EbNslBU?si=aAcSUB_eZIxNk5uN",
+      },
+
   {
     number: "03",
     title: "Browser Automation",
